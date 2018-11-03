@@ -1,0 +1,77 @@
+#Eclips Paths
+.classpath
+.project
+.settings/
+bin/
+.mvn
+
+#IntelliJ Idea Paths
+.idea/
+*.iml
+*.uml
+*.iws
+atlassia*
+out/
+
+#Netbeans output
+nbproject
+dist/
+build/
+dbdist/
+nbactions.xml
+nb-configuration.xml
+
+#Apple Paths
+.DS_Store
+
+#Maven Paths
+log/
+target/
+
+#Maven Plugins
+test-output/
+
+overlays/
+
+#Misc Editor
+*.bak
+*.tmp
+*.log
+
+#Java File Extensions
+*.class
+*.jar
+*.war
+*.ear
+
+rebel.xml
+dependency-reduced-pom.xml
+
+#JSF
+*.NavData
+
+#Generated Asciidoc Files
+.asciidoctor
+
+#Local Scripts
+build.sh
+run.sh
+debug.sh
+showlogs.sh
+
+#Spring Boot
+.mvn
+mvnw
+mvnw.cmd
+
+#looper 
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+!/service-registry-ui/src/main/tomee/bin/
+
