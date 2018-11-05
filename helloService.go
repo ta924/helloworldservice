@@ -21,12 +21,20 @@ func main()  {
 
 func helloHandler(w http.ResponseWriter, r *http.Request)  {
 
-	response := helloWorldResponse{Message: "Hello World"}
-	data, err := json.Marshal(response)
+	var request helloWorldRequest
+	decoder := json.NewDecoder(r.Body)
+
+	err := decoder.Decode(&request)
 
 	if err != nil {
-		panic("Oooops")
+		http.Error(w,"Bad Request", http.StatusBadRequest)
+		//ensure these are present or you will continue to process the request
+		return
 	}
 
-	fmt.Fprint(w, string(data))
+	response := helloWorldResponse{Message: "Hello " + request.Name}
+
+	//Marshal response and send success message with JSON
+	encoder := json.NewEncoder(w)
+	encoder.Encode(&response)
 }

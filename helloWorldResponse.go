@@ -1,5 +1,5 @@
 package main
 
 type helloWorldResponse struct {
-	Message string
+	Message string `json:"message"`
 } 
